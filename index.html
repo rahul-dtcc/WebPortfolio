@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .form-error {
+            display: none;
+            color: #ef4444; /* Red-500 */
+        }
+        .form-success {
+            display: none;
+            color: #22c55e; /* Green-500 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-800 shadow-lg py-16">
+        <div class="container mx-auto px-4 text-center">
+            <img src="https://placehold.co/150x150/1f2937/d1d5db?text=RJ" alt="Company Logo" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-purple-400 object-cover">
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-2 text-white">Rahul Jogula</h1>
+            <h2 class="text-2xl md:text-3xl font-semibold text-purple-400">Software Developer</h2>
+            <p class="mt-4 text-lg max-w-2xl mx-auto">
+                Committed to continuous learning and staying current with emerging technologies to drive innovation and performance improvements.
+            </p>
+
+            <div class="flex justify-center space-x-6 mt-6 text-2xl">
+                <a href="https://github.com/rahul-dtcc/portfolio" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="www.linkedin.com/in/rahul-j-7a9733158" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 space-y-24">
+
+        <section id="about" class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-4xl font-bold mb-4 text-white">About Me</h3>
+                <p class="text-lg text-gray-400 leading-relaxed">
+                    Accomplished professional with 8.9 years of proven expertise in organizational and multitasking abilities, combined with a robust aptitude for technology. Ready to harness skills and knowledge to overcome any challenge.
+                </p>
+            </div>
+            <div class="hidden lg:block">
+                <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Your+Workspace" alt="Your Workspace" class="rounded-xl shadow-2xl">
+            </div>
+        </section>
+
+        <section id="education">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Education</h3>
+            <div class="grid md:grid-cols-2 gap-8 text-center md:text-left">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-semibold text-white">Bachelor of Technology</h4>
+                    <p class="text-lg text-purple-400">Jawaharlal Nehru Technological University - Hyderabaad (India)</p>
+                    <p class="text-gray-400">January 2013</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-semibold text-white">Master’s in Computer and Information Science</h4>
+                    <p class="text-lg text-purple-400">Stratford University - VA</p>
+                    <p class="text-gray-400">January 2017</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Skills</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Core Skills</h4>
+                    <ul class="text-gray-400 space-y-2 list-disc list-inside">
+                        <li>Software Development Standards</li>
+                        <li>Requirements Gathering</li>
+                        <li>Application Development</li>
+                        <li>Full Stack Development</li>
+                        <li>User Experience Design</li>
+                        <li>Team Collaboration</li>
+                        <li>Responsive Web Design</li>
+                        <li>Software Architecture</li>
+                        <li>DevOps Principles</li>
+                        <li>Microservices Architecture</li>
+                        <li>Data Structures and Algorithms</li>
+                        <li>Unit Testing and Debugging</li>
+                        <li>Backend Programming</li>
+                        <li>Frontend Development</li>
+                        <li>Version Control Systems</li>
+                        <li>Continuous Integration and Deployment</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Technologies & Platforms</h4>
+                    <ul class="text-gray-400 space-y-2 list-disc list-inside">
+                        <li>Continuous Integration Systems</li>
+                        <li>Amazon Web Services</li>
+                        <li>Cloud Computing Platforms</li>
+                        <li>Serverless Architecture</li>
+                        <li>Web Technologies: AngularJS, jQuery, Bootstrap</li>
+                        <li>RESTful Services</li>
+                        <li>API Design and Integration</li>
+                        <li>Programming Languages: Java, C#, .Net, Python</li>
+                        <li>iOS Application Development</li>
+                        <li>Performance Analytics</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Databases & Data</h4>
+                    <ul class="text-gray-400 space-y-2 list-disc list-inside">
+                        <li>Data Storage and Retrieval</li>
+                        <li>RDMS Development</li>
+                        <li>NoSQL Databases</li>
+                        <li>Database Management</li>
+                        <li>Databases: Oracle, MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Projects</h3>
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+        </section>
+
+        <section id="resume" class="text-center">
+            <h3 class="text-4xl font-bold mb-4 text-white">My Resume</h3>
+            <p class="text-lg text-gray-400 mb-8">
+                View or download my full resume for a detailed look at my professional experience and skills.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://drive.google.com/file/d/1gUv9iWmX8ZD8q7R1UT06MFJDGC5YnwQO/view?usp=drive_link" target="_blank" class="inline-block bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300 transform hover:-translate-y-1">
+                    View Resume <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+                <a href="https://drive.google.com/file/d/1gUv9iWmX8ZD8q7R1UT06MFJDGC5YnwQO/view?usp=drive_link" download class="inline-block bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-600 transition-colors duration-300 transform hover:-translate-y-1">
+                    Download PDF <i class="fas fa-download ml-2"></i>
+                </a>
+            </div>
+        </section>
+        
+        <section id="recruiter-feedback">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Recruiter Feedback</h3>
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
+                <p class="text-lg text-gray-400 mb-6 text-center">
+                    If you are a recruiter, please use this form to submit your decision and feedback.
+                </p>
+                <form id="recruiter-form" class="space-y-6">
+                    <div>
+                        <label for="recruiter-name" class="block text-gray-300 mb-2">Your Name</label>
+                        <input type="text" id="recruiter-name" name="recruiter-name" required class="w-full bg-gray-700 text-white p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500">
+                        <p id="recruiter-name-error" class="form-error text-sm mt-1">Please enter your name.</p>
+                    </div>
+                    <div>
+                        <label for="recruiter-email" class="block text-gray-300 mb-2">Your Email</label>
+                        <input type="email" id="recruiter-email" name="recruiter-email" required class="w-full bg-gray-700 text-white p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500">
+                        <p id="recruiter-email-error" class="form-error text-sm mt-1">Please enter a valid email address.</p>
+                    </div>
+                    <div>
+                        <label for="decision" class="block text-gray-300 mb-2">Decision</label>
+                        <select id="decision" name="decision" required class="w-full bg-gray-700 text-white p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500">
+                            <option value="" disabled selected>Select a decision</option>
+                            <option value="positive">Positive</option>
+                            <option value="negative">Negative</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                        <p id="decision-error" class="form-error text-sm mt-1">Please select a decision.</p>
+                    </div>
+                    <div>
+                        <label for="feedback" class="block text-gray-300 mb-2">Feedback</label>
+                        <textarea id="feedback" name="feedback" rows="5" class="w-full bg-gray-700 text-white p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500" placeholder="Provide any additional feedback..."></textarea>
+                    </div>
+                    <div id="recruiter-form-success" class="form-success text-center py-2 rounded-md">
+                        Your feedback has been submitted successfully!
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-md shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">
+                        Submit Feedback
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="references" class="text-center">
+            <h3 class="text-4xl font-bold mb-4 text-white">References</h3>
+            <p class="text-lg text-gray-400">
+                References available upon request.
+            </p>
+        </section>
+
+    </main>
+
+    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-75 flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-xl p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <h4 id="modal-title" class="text-3xl font-bold text-white mb-2"></h4>
+            <p id="modal-subtitle" class="text-gray-400 mb-4"></p>
+            <div id="modal-content" class="text-gray-400 space-y-4 leading-relaxed">
+                </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 py-8 text-center text-gray-400">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Project Data Array
+            const projectsData = [
+                {
+                    title: "Java Developer with JBPM",
+                    date: "Feb 2025 - Present",
+                    location: "Verizon Contractor – Irving, TX | Value Nsa",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Understood the workflows in each API related to Order level, Account Level, Customer Level requests.</li>
+                            <li>Used a custom developed JBPM tool to process the service, order, account, customer level requests to make each request is served and updated to main frame/new systems aligned.</li>
+                            <li>Worked on different databases like Cassandra, PostgreSQL and Oracle in this period.</li>
+                            <li>Maintained the orders flowing in prod, nprod using the internal and log tools for monitoring.</li>
+                            <li>Used some regular tools like JUnit testing, Kibana, developer tools, other Verizon supported tools for this Project.</li>
+                            <li><strong>Technologies Used:</strong> Java, JBPM, Cassandra, PostgreSQL, Oracle, JUnit, Kibana.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Java Developer with JBPM",
+                    date: "July 2024 to Jan 2025",
+                    location: "Verizon Contractor – Irving, TX | National Retailers – Migration, Order Rewire",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Helped the team to migrate old legacy flow to new Stack using Spring Reactive, Micro Front end.</li>
+                            <li>Used Apigee for gateways, helped in throttling the traffic for new flow and understood the workflows in each API related to Order level, Account Level, Customer Level requests.</li>
+                            <li>Used a custom developed JBPM tool to process the service, order, account, customer level requests to make each request is served and updated to main frame/new systems aligned.</li>
+                            <li>Worked on different databases like Cassandra, PostgreSQL and Oracle in this period.</li>
+                            <li>Maintained the orders flowing in prod, nprod using the internal and log tools for monitoring.</li>
+                            <li>Used some regular tools like JUnit testing, Kibana, developer tools, other Verizon supported tools for this Project.</li>
+                            <li><strong>Technologies Used:</strong> Java, JBPM, Spring Reactive, Micro Front end, Apigee, Cassandra, PostgreSQL, Oracle, JUnit, Kibana.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Software Developer",
+                    date: "November 2023 to June 2024",
+                    location: "Verizon, TCS - Irving, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Worked on JBPM process along with full stack development.</li>
+                            <li>Using Business central to manage the process based on the request.</li>
+                            <li>Working on the user's request to add, disconnect, modify lines which involve JBPM, Rules, Java backend, Microservices.</li>
+                            <li>Utilized front-end, monitoring tools, PostgreSQL, Cassandra, PGAdmin, DataStax, Kibana, Spring, J2ee, and have an understanding of NSA Architecture and new implementations.</li>
+                            <li><strong>Technologies Used:</strong> JBPM, Java, Microservices, Spring, J2ee, PostgreSQL, Cassandra, PGAdmin, DataStax, Kibana.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Java Developer",
+                    date: "May 2022 to October 2023",
+                    location: "CITI, TCS - Irving, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Worked on developing new APIs required for enrolling third-party provided coupons, digital coupons, and in-store coupons.</li>
+                            <li>Implemented SSO for Citi gateway and provided seamless transaction service in third-party system.</li>
+                            <li>Implemented micro service architecture and created services from scratch using Spring Boot and Node with Express.</li>
+                            <li>Designed and Developed UI for Customer Service Modules and Reports using Angular 14.0, HTML, CSS, Bootstrap, and services.</li>
+                            <li>Worked with Angular CLI and TypeScript in Angular 14.0 to create Controllers and Angular components mainly Custom components for the Web Pages.</li>
+                            <li>Worked with reactive forms, template-driven forms and written pipes in Angular 14.0 to transform the data.</li>
+                            <li>Developed pages using Angular 14.0 directives, expressions, routing capabilities for bookmarking, filters, validations, and Angular UI components such as grid, buttons, carousels, date pickers, modal dialogs and other input components.</li>
+                            <li>Development of UI modules using HTML, JavaScript, Angular 14, and CSS.</li>
+                            <li>Created Ant build file to build the application and deployed on Web Sphere Application Server.</li>
+                            <li>Deployed and developed my project using AWS EC2, S3, Data pipeline, Elastic Beanstalk, Cloud Watch, Elastic Search, AWS server migration service, Lambda, Amazon messaging services (SQS and SNS) and Amazon Kinesis services.</li>
+                            <li>Used AWS Elastic Beanstalk service for deploying various infrastructures which orchestrate various AWS services.</li>
+                            <li>Used AWS data pipeline service for moving data between AWS compute and storage services and created complex data processing fault-tolerant and repeatable workloads.</li>
+                            <li>Used Amazon Elastic search service for full text search and application monitoring.</li>
+                            <li>Used Amazon SQS queuing service for reliable communication among distributed software components and micro services and used Amazon SNS push notification service for sending individual messages to mobile device users, email recipients and to distributed users.</li>
+                            <li>Developed the micro services using Spring Boot to get a range of non-functional features.</li>
+                            <li><strong>Technologies Used:</strong> Java, Spring Boot, Node.js with Express, Angular 14, HTML, CSS, Bootstrap, AWS (EC2, S3, Elastic Beanstalk, Cloud Watch, Elastic Search, Lambda, SQS, SNS, Kinesis), JavaScript, Ant, Microservices.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Java Developer",
+                    date: "June 2021 to April 2022",
+                    location: "Verizon, HCL - Irving, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Involved in developing / identifying the bugs, blockers, and defects in shopping services component (CXP Aggregate) of Verizon.</li>
+                            <li>Working in Agile methodology and providing the best customer experience services.</li>
+                            <li>As CXP aggregate is a middleware platform which deals with Cart related enhancements / issues – they are solved on priority bases.</li>
+                            <li>Using Angular 12 worked on Improved performance and reduced bundle size with the introduction of the Angular Ivy compiler.</li>
+                            <li>With Angular 12 Enhanced support for TypeScript 4.2 and improved type checking.</li>
+                            <li>Updated Angular Material components and new features like drag and drop, stepper, and virtual scrolling.</li>
+                            <li>Improved support for accessibility with updated ARIA attributes and keyboard navigation.</li>
+                            <li>Developed a Micro Service Oriented application with React JS and Spring Boot Services.</li>
+                            <li>Worked with the development team to create appropriate cloud solutions for client needs.</li>
+                            <li>Implemented database layer using EJB 3.0 and Java Persistence API(JPA) in maintenance projects.</li>
+                            <li><strong>Technologies Used:</strong> Java, Angular 12, TypeScript, React JS, Spring Boot, EJB 3.0, JPA, Agile.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full stack Java developer",
+                    date: "March 2020 to May 2021",
+                    location: "USAA, TCS - San Antonio, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Involved in the complete Software Development Life Cycle including Requirement Analysis, Design, Implementation, Testing and Maintenance of the project which was modelled using waterfall model.</li>
+                            <li>Helped the team to develop some features in TALON Framework, new LOB Environments.</li>
+                            <li>Implemented Java Web services based on SOA architecture with SOAP and WSDL.</li>
+                            <li>Implemented SOAP messages for information exchange for Web services.</li>
+                            <li>Developed SOAP web services (JAX-WS) for sending and getting data from different applications WSDL generation and exposed the service at server-side over the Internet and tested the services using JUnit.</li>
+                            <li>Design and implemented Axis based Web Services SOAP/WSDL interface between java and non-java applications.</li>
+                            <li>Used Junit, and TestNG frameworks for writing test cases and testing the application functionality.</li>
+                            <li>Used Java Message Service (JMS) for reliable and asynchronous exchange of important information for status reports.</li>
+                            <li>Used Agile SCRUM methodology for developing Application.</li>
+                            <li>Implemented the Project structure based on Spring MVC pattern using dispatched servlet.</li>
+                            <li>Designed various tables required for the project in Oracle 11g database and used the stored procedures in the application and Wrote Stored Procedures, Triggers and Functions on SQL Server as well as PL/SQL on Oracle to support both databases for the application.</li>
+                            <li>Repeatedly worked on AWS Cloud platform and its features which include EC2, VPC.</li>
+                            <li>Wrote GWT code to create a presentation layer using GWT widgets and event handlers.</li>
+                            <li>Worked on creating documents in a Mongo database.</li>
+                            <li>Participated in the development of a well responsive Single Page Application (SPA) using AngularJS framework, JavaScript and jQuery in conjunction with HTML, CSS3 standards, with front-end UI team.</li>
+                            <li>Used JQ grid/JSON/AJAX and Custom HTML Helper Classes to implement asynchronous calls to the server to update the changes.</li>
+                            <li>Using Angular 13 worked on Updated dependencies and performance improvements for faster application startup.</li>
+                            <li>Enhanced support for TypeScript 4.4 with stricter type checking and improved developer experience.</li>
+                            <li>Improved navigation and routing with new features like scroll position restoration, lazy loading, and route guards.</li>
+                            <li><strong>Technologies Used:</strong> Java, SOAP, WSDL, Junit, TestNG, JMS, Agile SCRUM, Spring MVC, Oracle 11g, SQL Server, PL/SQL, AWS (EC2, VPC), GWT, AngularJS, jQuery, HTML, CSS3, Angular 13, MongoDB.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Java Developer",
+                    date: "June 2019 to January 2020",
+                    location: "HP INC, HP2B, E-Commerce Application - Austin, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Designed the user interface screen and its functionality as per user requirements and developed RESTful Web services.</li>
+                            <li>Created and consumed RESTful based Web services and worked with JMS Queues for sending messages in point-to-point mode communication.</li>
+                            <li>Maintain the hosted applications in different environments using AWS services.</li>
+                            <li>Worked on product, price subscriptions for HP Customers based on the request.</li>
+                            <li>Worked on the feature enhancements, catalog, batch jobs to provide data related to product and pricing for B2B, B2C applications.</li>
+                            <li>Used IBM mainframes to understand the values in DB and debug hosting and application level.</li>
+                            <li><strong>Technologies Used:</strong> Java, RESTful Web services, JMS, AWS, IBM mainframes.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Java Developer",
+                    date: "October 2018 to May 2019",
+                    location: "Boeing, Jeppesen, HCL America - Denver, CO",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Designed the Web application Using Spring MVC (Model View Controller) pattern to make it extensible and flexible.</li>
+                            <li>Analyzed, designed, implemented web-based application using Java, JPA, JSP, spring, XML, and SQL.</li>
+                            <li>Worked on Boeing features like weather report, flight deck, airport Taxing applications.</li>
+                            <li>Azure is used as a cloud and implemented ARM Templates to deploy necessary configured platforms/containers on a request basis.</li>
+                            <li>Utilized many AWS, Atlassian, Azure services to create a seamless customer / flight staff / Airport services journey.</li>
+                            <li>Used JPA as data persistence API for all the DAO database operations.</li>
+                            <li>Generated Hibernate Objects and used Hibernate ORM for SOTI Publisher application.</li>
+                            <li>Used Maven project management tool for building and deployment of the application.</li>
+                            <li>Used spring quartz timer to load the DIM database with device battery information on regular intervals of time.</li>
+                            <li>Developed Spring REST Web services for opening, closing the locker door Webservices operations.</li>
+                            <li><strong>Technologies Used:</strong> Java, Spring MVC, JPA, JSP, Spring, XML, SQL, Azure, ARM Templates, AWS, Atlassian, Hibernate ORM, Maven, REST Web services.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Java Developer",
+                    date: "August 2017 to June 2018",
+                    location: "Comcast, Xfinity - Philadelphia, PA",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Implemented Different Design patterns like singleton, factory and J2EE design patterns like Business delegate, session facade, Value object and DAO design patterns.</li>
+                            <li>Used Spring Framework's IOC Dependency Injection to inject Service Object using Service Locator Design Pattern into Action Classes.</li>
+                            <li>Developed TV-GO feature to stream on multiple devices using Comcast accounts.</li>
+                            <li>Used Struts tag libraries in the JSP pages.</li>
+                            <li>Developed a controller Servlets that dispatches request to appropriate Action Classes.</li>
+                            <li>Developed the application under J2EE Architecture using spring, Struts, Hibernate, Servlets, Web logic and JSP.</li>
+                            <li>Used agile methodologies during the complete project life cycle.</li>
+                            <li><strong>Technologies Used:</strong> Java, J2EE, Spring Framework, Struts, Hibernate, Servlets, Web logic, JSP, Agile.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Java Developer",
+                    date: "June 2013 to May 2015",
+                    location: "First Indian Corp - US",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Developed the GUI of the system using HTML, JSP and client-side validations was done using JavaScript.</li>
+                            <li>Built and accessed the database using JDBC for ORACLE9i.</li>
+                            <li>Struts Framework in conjunction with JSP and Tag Libraries used in developing user Interface for administrative screens and user interaction screens.</li>
+                            <li>Developed Session Beans for necessary transactions like fetching the data required, updating the customer information.</li>
+                            <li>Worked on coding of Servlets and EJB communication.</li>
+                            <li><strong>Technologies Used:</strong> Java, HTML, JSP, JavaScript, JDBC, ORACLE9i, Struts Framework, EJB, Servlets.</li>
+                        </ul>
+                    `
+                },
+            ];
+
+            const projectsGrid = document.getElementById('projects-grid');
+            const projectModal = document.getElementById('project-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalSubtitle = document.getElementById('modal-subtitle');
+            const modalContent = document.getElementById('modal-content');
+
+            // Function to generate and display project cards
+            function renderProjects() {
+                projectsData.forEach((project, index) => {
+                    const projectCard = document.createElement('div');
+                    projectCard.className = 'bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col justify-between transform transition-transform duration-300 hover:scale-105 cursor-pointer';
+                    projectCard.innerHTML = `
+                        <h4 class="text-2xl font-semibold text-white mb-2">${project.title}</h4>
+                        <p class="text-purple-400 text-sm mb-1">${project.location}</p>
+                        <p class="text-gray-400 text-xs mb-4">${project.date}</p>
+                        <button class="bg-purple-600 text-white font-bold py-2 px-4 rounded-full mt-4 hover:bg-purple-700 transition-colors duration-300 self-start">
+                            Read More
+                        </button>
+                    `;
+                    projectCard.addEventListener('click', () => {
+                        modalTitle.textContent = project.title;
+                        modalSubtitle.textContent = `${project.location} | ${project.date}`;
+                        modalContent.innerHTML = project.details;
+                        projectModal.classList.remove('hidden');
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    });
+                    projectsGrid.appendChild(projectCard);
+                });
+            }
+
+            // Close modal functionality
+            closeModalBtn.addEventListener('click', () => {
+                projectModal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+
+            // Close modal by clicking outside
+            window.addEventListener('click', (event) => {
+                if (event.target === projectModal) {
+                    projectModal.classList.add('hidden');
+                    document.body.style.overflow = '';
+                }
+            });
+
+            // Recruiter Form Validation (as provided)
+            const recruiterForm = document.getElementById('recruiter-form');
+            recruiterForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                let isValid = true;
+                const nameInput = document.getElementById('recruiter-name');
+                const emailInput = document.getElementById('recruiter-email');
+                const decisionInput = document.getElementById('decision');
+
+                // Name validation
+                if (nameInput.value.trim() === '') {
+                    isValid = false;
+                    document.getElementById('recruiter-name-error').style.display = 'block';
+                } else {
+                    document.getElementById('recruiter-name-error').style.display = 'none';
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value)) {
+                    isValid = false;
+                    document.getElementById('recruiter-email-error').style.display = 'block';
+                } else {
+                    document.getElementById('recruiter-email-error').style.display = 'none';
+                }
+
+                // Decision validation
+                if (decisionInput.value === '') {
+                    isValid = false;
+                    document.getElementById('decision-error').style.display = 'block';
+                } else {
+                    document.getElementById('decision-error').style.display = 'none';
+                }
+
+                if (isValid) {
+                    // Simulate form submission
+                    console.log('Form submitted:', {
+                        name: nameInput.value,
+                        email: emailInput.value,
+                        decision: decisionInput.value,
+                        feedback: document.getElementById('feedback').value,
+                    });
+                    document.getElementById('recruiter-form-success').style.display = 'block';
+                    recruiterForm.reset();
+                }
+            });
+
+            // Initial render of projects
+            renderProjects();
+        });
+    </script>
+</body>
+</html>
