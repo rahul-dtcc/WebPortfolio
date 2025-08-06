@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .form-error {
+            display: none;
+            color: #ef4444; /* Red-500 */
+        }
+        .form-success {
+            display: none;
+            color: #22c55e; /* Green-500 */
+        }
+        .skill-bar-container {
+            background-color: #4b5563; /* Gray-700 */
+            border-radius: 0.5rem; /* rounded-md */
+            overflow: hidden;
+            width: 100%; /* Ensure it takes full width within flex */
+        }
+        .skill-bar {
+            height: 0.75rem; /* h-3 */
+            background-color: #a78bfa; /* Purple-400 */
+            border-radius: 0.5rem; /* rounded-md */
+            width: 0%; /* Initial width for animation */
+            transition: width 1s ease-in-out;
+        }
+        .skill-item-row {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem; /* space-x-3 */
+            margin-bottom: 0.5rem; /* Add some spacing between rows */
+        }
+        .skill-item-row:last-child {
+            margin-bottom: 0; /* No margin for the last item */
+        }
+        .skill-icon {
+            width: 1.5rem; /* Adjust icon width */
+            text-align: center;
+            flex-shrink: 0; /* Prevent icon from shrinking */
+        }
+        .skill-name {
+            flex-grow: 1; /* Allow skill name to take available space */
+            flex-shrink: 1; /* Allow skill name to shrink if needed */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <header class="bg-gray-800 shadow-lg py-16">
+        <div class="container mx-auto px-4 text-center">
+            <img src="https://placehold.co/150x150/1f2937/d1d5db?text=RJ" alt="Company Logo" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-purple-400 object-cover">
+            
+            <h1 class="text-5xl md:text-6xl font-bold mb-2 text-white">Rahul Jogula</h1>
+            <h2 class="text-2xl md:text-3xl font-semibold text-purple-400">Software Developer</h2>
+            <p class="mt-4 text-lg max-w-2xl mx-auto">
+                Committed to continuous learning and staying current with emerging technologies to drive innovation and performance improvements.
+            </p>
+
+            <div class="flex flex-wrap justify-center space-x-6 mt-6 text-lg md:text-2xl">
+                <a href="https://github.com/rahul-dtcc/portfolio" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rahul-j-7a9733158" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <span class="text-gray-400"><i class="fas fa-phone"></i> <span class="text-base md:text-xl">469-992-1093</span></span>
+                <span class="text-gray-400"><i class="fas fa-envelope"></i> <span class="text-base md:text-xl">raahul0291@gmail.com</span></span>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16 space-y-24">
+
+        <section id="about" class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <h3 class="text-4xl font-bold mb-4 text-white">About Me</h3>
+                <p class="text-lg text-gray-400 leading-relaxed">
+                    Accomplished professional with 8.9 years of proven expertise in organizational and multitasking abilities, combined with a robust aptitude for technology. Ready to harness skills and knowledge to overcome any challenge.
+                </p>
+            </div>
+            <div class="hidden lg:block">
+                <img src="https://placehold.co/600x400/1f2937/d1d5db?text=Your+Workspace" alt="Your Workspace" class="rounded-xl shadow-2xl">
+            </div>
+        </section>
+
+        <section id="education">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Education</h3>
+            <div class="grid md:grid-cols-2 gap-8 text-center md:text-left">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-semibold text-white">Bachelor of Technology</h4>
+                    <p class="text-lg text-purple-400">Jawaharlal Nehru Technological University - Hyderabaad (India)</p>
+                    <p class="text-gray-400">January 2013</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-semibold text-white">Master’s in Computer and Information Science</h4>
+                    <p class="text-lg text-purple-400">Stratford University - VA</p>
+                    <p class="text-gray-400">January 2017</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Skills</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Programming Languages</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fab fa-java text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="88"></div>
+                            </div>
+                            <span class="text-sm">(7 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fab fa-js-square text-purple-400 skill-icon"></i>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fab fa-go text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Go</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-terminal text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Shell Scripting</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Frameworks and Libraries</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fas fa-leaf text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Spring Boot</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="88"></div>
+                            </div>
+                            <span class="text-sm">(7 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-cogs text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Spring Framework</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-database text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Hibernate</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fab fa-angular text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Angular</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fab fa-js-square text-purple-400 skill-icon"></i>
+                            <span class="skill-name">jQuery</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Databases</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fas fa-database text-purple-400 skill-icon"></i>
+                            <span class="skill-name">MySQL</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-database text-purple-400 skill-icon"></i>
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-database text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Microsoft SQL Server</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-database text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Oracle Database</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="100"></div>
+                            </div>
+                            <span class="text-sm">(8 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-database text-purple-400 skill-icon"></i>
+                            <span class="skill-name">IBM Db2</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-database text-purple-400 skill-icon"></i>
+                            <span class="skill-name">NoSQL</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-tools text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Database Management</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="88"></div>
+                            </div>
+                            <span class="text-sm">(7 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-sitemap text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Database Schema Design</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="88"></div>
+                            </div>
+                            <span class="text-sm">(7 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-sliders-h text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Database Tuning</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">DevOps and CI/CD Tools</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fab fa-jenkins text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Jenkins</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="75"></div>
+                            </div>
+                            <span class="text-sm">(6 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fab fa-docker text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fab fa-kubernetes text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Kubernetes</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fab fa-aws text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Amazon Elastic Container Service</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fab fa-aws text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Amazon Elastic Kubernetes Service</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fab fa-aws text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Amazon Web Services</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="88"></div>
+                            </div>
+                            <span class="text-sm">(7 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-sync-alt text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Continuous Integration and Continuous Deployment</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="75"></div>
+                            </div>
+                            <span class="text-sm">(6 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-truck-loading text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Continuous Delivery</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-eye text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Continuous Monitoring</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-hammer text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Build Automation</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Testing Tools</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fas fa-flask text-purple-400 skill-icon"></i>
+                            <span class="skill-name">JUnit</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="100"></div>
+                            </div>
+                            <span class="text-sm">(8 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-vial text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Mockito</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-wrench text-purple-400 skill-icon"></i>
+                            <span class="skill-name">SoapUI</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="50"></div>
+                            </div>
+                            <span class="text-sm">(4 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-paper-plane text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Postman</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-tachometer-alt text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Apache JMeter</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-code-branch text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Integration Testing</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-file-code text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Code Coverage</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Cloud Technologies</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fab fa-aws text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Amazon Web Services Lambda</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-cloud text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Cloud Foundry</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-microchip text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Microservices Architecture</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="100"></div>
+                            </div>
+                            <span class="text-sm">(8 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-cloud-upload-alt text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Cloud Native</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">API Technologies</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fas fa-plug text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Application Programming Interface</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-restroom text-purple-400 skill-icon"></i> <span class="skill-name">Representational State Transfer APIs</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="50"></div>
+                            </div>
+                            <span class="text-sm">(4 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-sitemap text-purple-400 skill-icon"></i>
+                            <span class="skill-name">API Gateway</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-key text-purple-400 skill-icon"></i>
+                            <span class="skill-name">JSON Web Token</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="100"></div>
+                            </div>
+                            <span class="text-sm">(8 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-link text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Application Programming Interface Integration</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Monitoring and Logging</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fas fa-chart-bar text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Splunk</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-chart-area text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Grafana</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-chart-line text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Dynatrace</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Agile and Project Management</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fas fa-people-arrows text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Agile</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-users-cog text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Scrum</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-calendar-check text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Daily Stand-Ups</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-tasks text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Sprint Planning</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-user-tie text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Product Owner</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Security</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fas fa-shield-alt text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Spring Security</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-lock text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Secure Sockets Layer</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-user-lock text-purple-400 skill-icon"></i>
+                            <span class="skill-name">OAuth</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-handshake text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Security Best Practices</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 shadow-lg">
+                    <h4 class="text-xl font-bold text-white mb-4">Other Technologies and Skills</h4>
+                    <ul class="text-gray-400 space-y-3">
+                        <li class="skill-item-row">
+                            <i class="fas fa-headset text-purple-400 skill-icon"></i>
+                            <span class="skill-name">ServiceNow</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="75"></div>
+                            </div>
+                            <span class="text-sm">(6 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-lightbulb text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Digital Transformation</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-bug text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Troubleshooting</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-rocket text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Performance Optimization</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-cogs text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Performance Tuning</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="100"></div>
+                            </div>
+                            <span class="text-sm">(8 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-user-friends text-purple-400 skill-icon"></i>
+                            <span class="skill-name">User Management</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-glasses text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Code Review</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-file-alt text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Documentation</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-pen-nib text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Technical Writing</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-search text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Requirements Analysis</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-drafting-compass text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Technical Design</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-exchange-alt text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Knowledge Transfer</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-check-circle text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Good Practice</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-handshake text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Collaboration</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="88"></div>
+                            </div>
+                            <span class="text-sm">(7 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-microscope text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Investigation</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-award text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Customer Success</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="38"></div>
+                            </div>
+                            <span class="text-sm">(3 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-shield-alt text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Fraud Detection</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-file-invoice-dollar text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Medical Billing</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="63"></div>
+                            </div>
+                            <span class="text-sm">(5 Yrs)</span>
+                        </li>
+                        <li class="skill-item-row">
+                            <i class="fas fa-briefcase text-purple-400 skill-icon"></i>
+                            <span class="skill-name">Business Requirements</span>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar" data-level="25"></div>
+                            </div>
+                            <span class="text-sm">(2 Yrs)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Projects</h3>
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div>
+        </section>
+
+        <section id="resume" class="text-center">
+            <h3 class="text-4xl font-bold mb-4 text-white">My Resume</h3>
+            <p class="text-lg text-gray-400 mb-8">
+                View or download my full resume for a detailed look at my professional experience and skills.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="https://drive.google.com/file/d/1B3ee0kM7rBOYCoWN2SIY-NFy66bJO0Tw/view?usp=drive_link" target="_blank" class="inline-block bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-700 transition-colors duration-300 transform hover:-translate-y-1">
+                    View Resume <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+                <a href="https://drive.google.com/file/d/1B3ee0kM7rBOYCoWN2SIY-NFy66bJO0Tw/view?usp=drive_link" download class="inline-block bg-gray-700 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-600 transition-colors duration-300 transform hover:-translate-y-1">
+                    Download PDF <i class="fas fa-download ml-2"></i>
+                </a>
+            </div>
+        </section>
+        
+        <section id="recruiter-feedback">
+            <h3 class="text-4xl font-bold text-center mb-12 text-white">Recruiter Feedback</h3>
+            <div class="bg-gray-800 p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
+                <p class="text-lg text-gray-400 mb-6 text-center">
+                    If you are a recruiter, please use this form to submit your decision and feedback.
+                </p>
+                <form id="recruiter-form" class="space-y-6">
+                    <div>
+                        <label for="recruiter-name" class="block text-gray-300 mb-2">Your Name</label>
+                        <input type="text" id="recruiter-name" name="recruiter-name" required class="w-full bg-gray-700 text-white p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500">
+                        <p id="recruiter-name-error" class="form-error text-sm mt-1">Please enter your name.</p>
+                    </div>
+                    <div>
+                        <label for="recruiter-email" class="block text-gray-300 mb-2">Your Email</label>
+                        <input type="email" id="recruiter-email" name="recruiter-email" required class="w-full bg-gray-700 text-white p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500">
+                        <p id="recruiter-email-error" class="form-error text-sm mt-1">Please enter a valid email address.</p>
+                    </div>
+                    <div>
+                        <label for="decision" class="block text-gray-300 mb-2">Decision</label>
+                        <select id="decision" name="decision" required class="w-full bg-gray-700 text-white p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500">
+                            <option value="" disabled selected>Select a decision</option>
+                            <option value="positive">Positive</option>
+                            <option value="negative">Negative</option>
+                            <option value="pending">Pending</option>
+                        </select>
+                        <p id="decision-error" class="form-error text-sm mt-1">Please select a decision.</p>
+                    </div>
+                    <div>
+                        <label for="feedback" class="block text-gray-300 mb-2">Feedback</label>
+                        <textarea id="feedback" name="feedback" rows="5" class="w-full bg-gray-700 text-white p-3 rounded-md border border-gray-600 focus:outline-none focus:border-purple-500" placeholder="Provide any additional feedback..."></textarea>
+                    </div>
+                    <div id="recruiter-form-success" class="form-success text-center py-2 rounded-md">
+                        Your feedback has been submitted successfully!
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 text-white font-bold py-3 px-6 rounded-md shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">
+                        Submit Feedback
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="references" class="text-center">
+            <h3 class="text-4xl font-bold mb-4 text-white">References</h3>
+            <p class="text-lg text-gray-400">
+                References available upon request.
+            </p>
+        </section>
+
+    </main>
+
+    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-75 flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-xl p-8 max-w-3xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl">
+            <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white text-2xl">
+                <i class="fas fa-times"></i>
+            </button>
+            <h4 id="modal-title" class="text-3xl font-bold text-white mb-2"></h4>
+            <p id="modal-subtitle" class="text-gray-400 mb-4"></p>
+            <div id="modal-content" class="text-gray-400 space-y-4 leading-relaxed">
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 py-8 text-center text-gray-400">
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Project Data Array
+            const projectsData = [
+                {
+                    title: "Java Developer with JBPM",
+                    date: "Feb 2025 - Present",
+                    location: "Verizon Contractor – Irving, TX | Value Nsa",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Understood the workflows in each API related to Order level, Account Level, Customer Level requests.</li>
+                            <li>Used a custom developed JBPM tool to process the service, order, account, customer level requests to make each request is served and updated to main frame/new systems aligned.</li>
+                            <li>Worked on different databases like Cassandra, PostgreSQL and Oracle in this period.</li>
+                            <li>Maintained the orders flowing in prod, nprod using the internal and log tools for monitoring.</li>
+                            <li>Used some regular tools like JUnit testing, Kibana, developer tools, other Verizon supported tools for this Project.</li>
+                            <li><strong>Technologies Used:</strong> Java, JBPM, Cassandra, PostgreSQL, Oracle, JUnit, Kibana.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Java Developer with JBPM",
+                    date: "July 2024 to Jan 2025",
+                    location: "Verizon Contractor – Irving, TX | National Retailers – Migration, Order Rewire",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Helped the team to migrate old legacy flow to new Stack using Spring Reactive, Micro Front end.</li>
+                            <li>Used Apigee for gateways, helped in throttling the traffic for new flow and understood the workflows in each API related to Order level, Account Level, Customer Level requests.</li>
+                            <li>Used a custom developed JBPM tool to process the service, order, account, customer level requests to make each request is served and updated to main frame/new systems aligned.</li>
+                            <li>Worked on different databases like Cassandra, PostgreSQL and Oracle in this period.</li>
+                            <li>Maintained the orders flowing in prod, nprod using the internal and log tools for monitoring.</li>
+                            <li>Used some regular tools like JUnit testing, Kibana, developer tools, other Verizon supported tools for this Project.</li>
+                            <li><strong>Technologies Used:</strong> Java, JBPM, Spring Reactive, Micro Front end, Apigee, Cassandra, PostgreSQL, Oracle, JUnit, Kibana.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Software Developer",
+                    date: "November 2023 to June 2024",
+                    location: "Verizon, TCS - Irving, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Worked on JBPM process along with full stack development.</li>
+                            <li>Using Business central to manage the process based on the request.</li>
+                            <li>Working on the user's request to add, disconnect, modify lines which involve JBPM, Rules, Java backend, Microservices.</li>
+                            <li>Utilized front-end, monitoring tools, PostgreSQL, Cassandra, PGAdmin, DataStax, Kibana, Spring, J2ee, and have an understanding of NSA Architecture and new implementations.</li>
+                            <li><strong>Technologies Used:</strong> JBPM, Java, Microservices, Spring, J2ee, PostgreSQL, Cassandra, PGAdmin, DataStax, Kibana.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Java Developer",
+                    date: "May 2022 to October 2023",
+                    location: "CITI, TCS - Irving, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Worked on developing new APIs required for enrolling third-party provided coupons, digital coupons, and in-store coupons.</li>
+                            <li>Implemented SSO for Citi gateway and provided seamless transaction service in third-party system.</li>
+                            <li>Implemented micro service architecture and created services from scratch using Spring Boot and Node with Express.</li>
+                            <li>Designed and Developed UI for Customer Service Modules and Reports using Angular 14.0, HTML, CSS, Bootstrap, and services.</li>
+                            <li>Worked with Angular CLI and TypeScript in Angular 14.0 to create Controllers and Angular components mainly Custom components for the Web Pages.</li>
+                            <li>Worked with reactive forms, template-driven forms and written pipes in Angular 14.0 to transform the data.</li>
+                            <li>Developed pages using Angular 14.0 directives, expressions, routing capabilities for bookmarking, filters, validations, and Angular UI components such as grid, buttons, carousels, date pickers, modal dialogs and other input components.</li>
+                            <li>Development of UI modules using HTML, JavaScript, Angular 14, and CSS.</li>
+                            <li>Created Ant build file to build the application and deployed on Web Sphere Application Server.</li>
+                            <li>Deployed and developed my project using AWS EC2, S3, Data pipeline, Elastic Beanstalk, Cloud Watch, Elastic Search, AWS server migration service, Lambda, Amazon messaging services (SQS and SNS) and Amazon Kinesis services.</li>
+                            <li>Used AWS Elastic Beanstalk service for deploying various infrastructures which orchestrate various AWS services.</li>
+                            <li>Used AWS data pipeline service for moving data between AWS compute and storage services and created complex data processing fault-tolerant and repeatable workloads.</li>
+                            <li>Used Amazon Elastic search service for full text search and application monitoring.</li>
+                            <li>Used Amazon SQS queuing service for reliable communication among distributed software components and micro services and used Amazon SNS push notification service for sending individual messages to mobile device users, email recipients and to distributed users.</li>
+                            <li>Developed the micro services using Spring Boot to get a range of non-functional features.</li>
+                            <li><strong>Technologies Used:</strong> Java, Spring Boot, Node.js with Express, Angular 14, HTML, CSS, Bootstrap, AWS (EC2, S3, Elastic Beanstalk, Cloud Watch, Elastic Search, Lambda, SQS, SNS, Kinesis), JavaScript, Ant, Microservices.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Java Developer",
+                    date: "June 2021 to April 2022",
+                    location: "Verizon, HCL - Irving, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Involved in developing / identifying the bugs, blockers, and defects in shopping services component (CXP Aggregate) of Verizon.</li>
+                            <li>Working in Agile methodology and providing the best customer experience services.</li>
+                            <li>As CXP aggregate is a middleware platform which deals with Cart related enhancements / issues – they are solved on priority bases.</li>
+                            <li>Using Angular 12 worked on Improved performance and reduced bundle size with the introduction of the Angular Ivy compiler.</li>
+                            <li>With Angular 12 Enhanced support for TypeScript 4.2 and improved type checking.</li>
+                            <li>Updated Angular Material components and new features like drag and drop, stepper, and virtual scrolling.</li>
+                            <li>Improved support for accessibility with updated ARIA attributes and keyboard navigation.</li>
+                            <li>Developed a Micro Service Oriented application with React JS and Spring Boot Services.</li>
+                            <li>Worked with the development team to create appropriate cloud solutions for client needs.</li>
+                            <li>Implemented database layer using EJB 3.0 and Java Persistence API(JPA) in maintenance projects.</li>
+                            <li><strong>Technologies Used:</strong> Java, Angular 12, TypeScript, React JS, Spring Boot, EJB 3.0, JPA, Agile.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full stack Java developer",
+                    date: "March 2020 to May 2021",
+                    location: "USAA, TCS - San Antonio, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Involved in the complete Software Development Life Cycle including Requirement Analysis, Design, Implementation, Testing and Maintenance of the project which was modelled using waterfall model.</li>
+                            <li>Helped the team to develop some features in TALON Framework, new LOB Environments.</li>
+                            <li>Implemented Java Web services based on SOA architecture with SOAP and WSDL.</li>
+                            <li>Implemented SOAP messages for information exchange for Web services.</li>
+                            <li>Developed SOAP web services (JAX-WS) for sending and getting data from different applications WSDL generation and exposed the service at server-side over the Internet and tested the services using JUnit.</li>
+                            <li>Design and implemented Axis based Web Services SOAP/WSDL interface between java and non-java applications.</li>
+                            <li>Used Junit, and TestNG frameworks for writing test cases and testing the application functionality.</li>
+                            <li>Used Java Message Service (JMS) for reliable and asynchronous exchange of important information for status reports.</li>
+                            <li>Used Agile SCRUM methodology for developing Application.</li>
+                            <li>Implemented the Project structure based on Spring MVC pattern using dispatched servlet.</li>
+                            <li>Designed various tables required for the project in Oracle 11g database and used the stored procedures in the application and Wrote Stored Procedures, Triggers and Functions on SQL Server as well as PL/SQL on Oracle to support both databases for the application.</li>
+                            <li>Repeatedly worked on AWS Cloud platform and its features which include EC2, VPC.</li>
+                            <li>Wrote GWT code to create a presentation layer using GWT widgets and event handlers.</li>
+                            <li>Worked on creating documents in a Mongo database.</li>
+                            <li>Participated in the development of a well responsive Single Page Application (SPA) using AngularJS framework, JavaScript and jQuery in conjunction with HTML, CSS3 standards, with front-end UI team.</li>
+                            <li>Used JQ grid/JSON/AJAX and Custom HTML Helper Classes to implement asynchronous calls to the server to update the changes.</li>
+                            <li>Using Angular 13 worked on Updated dependencies and performance improvements for faster application startup.</li>
+                            <li>Enhanced support for TypeScript 4.4 with stricter type checking and improved developer experience.</li>
+                            <li>Improved navigation and routing with new features like scroll position restoration, lazy loading, and route guards.</li>
+                            <li><strong>Technologies Used:</strong> Java, SOAP, WSDL, Junit, TestNG, JMS, Agile SCRUM, Spring MVC, Oracle 11g, SQL Server, PL/SQL, AWS (EC2, VPC), GWT, AngularJS, jQuery, HTML, CSS3, Angular 13, MongoDB.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Java Developer",
+                    date: "June 2019 to January 2020",
+                    location: "HP INC, HP2B, E-Commerce Application - Austin, TX",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Designed the user interface screen and its functionality as per user requirements and developed RESTful Web services.</li>
+                            <li>Created and consumed RESTful based Web services and worked with JMS Queues for sending messages in point-to-point mode communication.</li>
+                            <li>Maintain the hosted applications in different environments using AWS services.</li>
+                            <li>Worked on product, price subscriptions for HP Customers based on the request.</li>
+                            <li>Worked on the feature enhancements, catalog, batch jobs to provide data related to product and pricing for B2B, B2C applications.</li>
+                            <li>Used IBM mainframes to understand the values in DB and debug hosting and application level.</li>
+                            <li><strong>Technologies Used:</strong> Java, RESTful Web services, JMS, AWS, IBM mainframes.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Full Stack Java Developer",
+                    date: "October 2018 to May 2019",
+                    location: "Boeing, Jeppesen, HCL America - Denver, CO",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Designed the Web application Using Spring MVC (Model View Controller) pattern to make it extensible and flexible.</li>
+                            <li>Analyzed, designed, implemented web-based application using Java, JPA, JSP, spring, XML, and SQL.</li>
+                            <li>Worked on Boeing features like weather report, flight deck, airport Taxing applications.</li>
+                            <li>Azure is used as a cloud and implemented ARM Templates to deploy necessary configured platforms/containers on a request basis.</li>
+                            <li>Utilized many AWS, Atlassian, Azure services to create a seamless customer / flight staff / Airport services journey.</li>
+                            <li>Used JPA as data persistence API for all the DAO database operations.</li>
+                            <li>Generated Hibernate Objects and used Hibernate ORM for SOTI Publisher application.</li>
+                            <li>Used Maven project management tool for building and deployment of the application.</li>
+                            <li>Used spring quartz timer to load the DIM database with device battery information on regular intervals of time.</li>
+                            <li>Developed Spring REST Web services for opening, closing the locker door Webservices operations.</li>
+                            <li><strong>Technologies Used:</strong> Java, Spring MVC, JPA, JSP, Spring, XML, SQL, Azure, ARM Templates, AWS, Atlassian, Hibernate ORM, Maven, REST Web services.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Java Developer",
+                    date: "August 2017 to June 2018",
+                    location: "Comcast, Xfinity - Philadelphia, PA",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Implemented Different Design patterns like singleton, factory and J2EE design patterns like Business delegate, session facade, Value object and DAO design patterns.</li>
+                            <li>Used Spring Framework's IOC Dependency Injection to inject Service Object using Service Locator Design Pattern into Action Classes.</li>
+                            <li>Developed TV-GO feature to stream on multiple devices using Comcast accounts.</li>
+                            <li>Used Struts tag libraries in the JSP pages.</li>
+                            <li>Developed a controller Servlets that dispatches request to appropriate Action Classes.</li>
+                            <li>Developed the application under J2EE Architecture using spring, Struts, Hibernate, Servlets, Web logic and JSP.</li>
+                            <li>Used agile methodologies during the complete project life cycle.</li>
+                            <li><strong>Technologies Used:</strong> Java, J2EE, Spring Framework, Struts, Hibernate, Servlets, Web logic, JSP, Agile.</li>
+                        </ul>
+                    `
+                },
+                {
+                    title: "Java Developer",
+                    date: "June 2013 to May 2015",
+                    location: "First Indian Corp - US",
+                    details: `
+                        <ul class="list-disc list-inside text-gray-400 space-y-2">
+                            <li>Developed the GUI of the system using HTML, JSP and client-side validations was done using JavaScript.</li>
+                            <li>Built and accessed the database using JDBC for ORACLE9i.</li>
+                            <li>Struts Framework in conjunction with JSP and Tag Libraries used in developing user Interface for administrative screens and user interaction screens.</li>
+                            <li>Developed Session Beans for necessary transactions like fetching the data required, updating the customer information.</li>
+                            <li>Worked on coding of Servlets and EJB communication.</li>
+                            <li><strong>Technologies Used:</strong> Java, HTML, JSP, JavaScript, JDBC, ORACLE9i, Struts Framework, EJB, Servlets.</li>
+                        </ul>
+                    `
+                },
+            ];
+
+            const projectsGrid = document.getElementById('projects-grid');
+            const projectModal = document.getElementById('project-modal');
+            const closeModalBtn = document.getElementById('close-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalSubtitle = document.getElementById('modal-subtitle');
+            const modalContent = document.getElementById('modal-content');
+
+            // Populate projects
+            function populateProjects() {
+                projectsData.forEach((project, index) => {
+                    const projectCard = document.createElement('div');
+                    projectCard.classList.add('bg-gray-800', 'rounded-xl', 'p-6', 'shadow-lg', 'cursor-pointer', 'hover:bg-gray-700', 'transition-colors', 'duration-300');
+                    projectCard.innerHTML = `
+                        <h4 class="text-2xl font-semibold text-white mb-2">${project.title}</h4>
+                        <p class="text-purple-400 mb-2">${project.date}</p>
+                        <p class="text-gray-400">${project.location}</p>
+                    `;
+                    projectCard.addEventListener('click', () => openProjectModal(index));
+                    projectsGrid.appendChild(projectCard);
+                });
+            }
+
+            // Open project modal
+            function openProjectModal(index) {
+                const project = projectsData[index];
+                modalTitle.textContent = project.title;
+                modalSubtitle.textContent = `${project.date} | ${project.location}`;
+                modalContent.innerHTML = project.details;
+                projectModal.classList.remove('hidden');
+            }
+
+            // Close project modal
+            closeModalBtn.addEventListener('click', () => {
+                projectModal.classList.add('hidden');
+            });
+
+            // Close modal when clicking outside
+            projectModal.addEventListener('click', (event) => {
+                if (event.target === projectModal) {
+                    projectModal.classList.add('hidden');
+                }
+            });
+
+            // Form validation and submission
+            const recruiterForm = document.getElementById('recruiter-form');
+            const recruiterName = document.getElementById('recruiter-name');
+            const recruiterEmail = document.getElementById('recruiter-email');
+            const decision = document.getElementById('decision');
+            const recruiterNameError = document.getElementById('recruiter-name-error');
+            const recruiterEmailError = document.getElementById('recruiter-email-error');
+            const decisionError = document.getElementById('decision-error');
+            const recruiterFormSuccess = document.getElementById('recruiter-form-success');
+
+            recruiterForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                let isValid = true;
+
+                // Reset errors
+                recruiterNameError.style.display = 'none';
+                recruiterEmailError.style.display = 'none';
+                decisionError.style.display = 'none';
+                recruiterFormSuccess.style.display = 'none';
+
+                if (recruiterName.value.trim() === '') {
+                    recruiterNameError.style.display = 'block';
+                    isValid = false;
+                }
+
+                if (recruiterEmail.value.trim() === '' || !recruiterEmail.value.includes('@')) {
+                    recruiterEmailError.style.display = 'block';
+                    isValid = false;
+                }
+
+                if (decision.value === '') {
+                    decisionError.style.display = 'block';
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    // In a real application, you'd send this data to a server
+                    console.log('Form Submitted!', {
+                        name: recruiterName.value,
+                        email: recruiterEmail.value,
+                        decision: decision.value,
+                        feedback: document.getElementById('feedback').value
+                    });
+                    recruiterFormSuccess.style.display = 'block';
+                    recruiterForm.reset(); // Clear the form
+                }
+            });
+
+            // Animate skill bars
+            function animateSkillBars() {
+                const skillBars = document.querySelectorAll('.skill-bar');
+                skillBars.forEach(bar => {
+                    const level = bar.dataset.level;
+                    bar.style.width = level + '%';
+                });
+            }
+
+            // Observe the skills section to animate bars when it's in view
+            const skillsSection = document.getElementById('skills');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkillBars();
+                        observer.unobserve(skillsSection); // Stop observing once animated
+                    }
+                });
+            }, { threshold: 0.2 }); // Trigger when 20% of the section is visible
+
+            observer.observe(skillsSection);
+
+            populateProjects();
+        });
+    </script>
+</body>
+</html>
